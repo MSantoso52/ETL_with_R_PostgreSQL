@@ -36,8 +36,8 @@ con <-dbConnect(
   RPostgres::Postgres(),
   host = "localhost",
   dbname = "carsdata",
-  user = "mulyo",
-  password = "Hasegawa@053",
+  user = "*****",
+  password = "*****",
   port = 5432
 )
 
