@@ -41,6 +41,7 @@ con <-dbConnect(
   port = 5432
 )
 
+# Load into PostgreSQL database
 dbWriteTable(
   con,
   "mtcars",
@@ -48,6 +49,9 @@ dbWriteTable(
   overwrite = TRUE,
   row.names = TRUE
 )
+
+# Load data as csv file
+write.csv(cars_transformed, "cars.csv")
 
 # Close the database connection
 dbDisconnect(con)
