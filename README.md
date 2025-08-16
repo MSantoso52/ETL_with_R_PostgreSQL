@@ -6,6 +6,12 @@ To follow along with this project, you will need:
 
 # *Project Flow*
 The process following below steps:
+- PostgreSQL server running
+  ```bash
+  sudo systemctl status postgresql
+- R installed
+  ```R
+  R --version
 1. Load necessary R library -- RPostgreSQL, dplyr
    ```R
    library(RPostgres)
