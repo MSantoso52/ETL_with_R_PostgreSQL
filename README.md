@@ -1,6 +1,8 @@
 # ETL_with_R_PostgreSQL
 # *Overview*
 Repository to perfrom ETL step by step, using R to conduct start from extracting - transforming - loading. Using CSV file as input & PostgreSQL as datawarehouse. This project how to using R language to conduct ETL in simplest way, hence using small sample just for demonstration. 
+# *Prerequisites* 
+To follow along with this project, you will need:
 
 # *Project Flow*
 The process following below steps:
