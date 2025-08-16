@@ -1,4 +1,6 @@
 # ETL_with_R_PostgreSQL
+# *Overview*
+Repository to perfrom ETL step by step, using R to conduct start from extracting - transforming - loading 
 ETL process using R and load PostgreSQL database
 
 Using R for ETL pipeline, the process following below steps:
