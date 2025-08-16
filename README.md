@@ -36,6 +36,26 @@ The process following below steps:
     carb = as.integer(carb)
    )
 7. Display transform result
-8. Create PostgreSQL connection -- passing the database, user, password, port, host
-9. Load (L) -- write into table database, csv file
-10. Close connection
+   ```R
+   # View the transformes data
+   print(cars_transformed)
+9. Create PostgreSQL connection -- passing the database, user, password, port, host
+    ```R
+   # Load 
+   # Database connection
+   con <-dbConnect(
+      RPostgres::Postgres(),
+      host = "localhost",
+      dbname = "carsdata",
+      user = "*****",
+      password = "*****",
+      port = 5432
+   )
+11. Load (L) -- write into table database, csv file
+    ```R
+    # Load data as csv file
+    write.csv(cars_transformed, "cars.csv")
+13. Close connection
+    ```R
+    # Close the database connection
+    dbDisconnect(con)
