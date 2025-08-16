@@ -14,7 +14,28 @@ The process following below steps:
    data(mtcars)
    cars_df <- as.data.frame(mtcars)
 5. Transform (T) -- remove duplicates, remove empty fields, correction the data type
-6. Display transform result
-7. Create PostgreSQL connection -- passing the database, user, password, port, host
-8. Load (L) -- write into table database, csv file
-9. Close connection
+   ```R
+   # Transform
+   cars_transformed <- cars_df %>%
+   # Remove duplicate
+   distinct() %>%
+   #  Remove any NA values
+   na.omit() %>%
+   # Ensure the format are correct:
+   mutate(
+    mpg = as.numeric(mpg),
+    cyl = as.integer(cyl),
+    disp = as.numeric(disp),
+    hp = as.numeric(hp),
+    drat = as.numeric(drat),
+    wt = as.numeric(wt),
+    qsec = as.numeric(qsec),
+    vs = as.integer(vs),
+    am = as.integer(am),
+    gear = as.integer(gear),
+    carb = as.integer(carb)
+   )
+7. Display transform result
+8. Create PostgreSQL connection -- passing the database, user, password, port, host
+9. Load (L) -- write into table database, csv file
+10. Close connection
